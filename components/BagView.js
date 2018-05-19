@@ -13,7 +13,8 @@ var boxWidth = width / 3;
 
 var JsonData = require('../data/test.json');
 
-var BaseUrl = 'http://192.168.56.1:3000/images/';
+//var BaseUrl = 'http://192.168.56.1:3000/images/';
+var BaseUrl = 'http://192.168.0.105:3000/images/';
 
 class BagView extends Component{
     renderBags = ()=>{
@@ -38,10 +39,10 @@ var styles = StyleSheet.create({
         flexWrap:'wrap' //换行
     },
     wrapperStyle:{
-        flexDirection:'column', //主轴，垂直方向
-        alignItems:'center', //交叉轴，居中对齐
-        width:boxWidth,
-        height:100
+        flexDirection: 'column', //主轴，垂直方向
+        alignItems: 'center', //交叉轴，居中对齐
+        width: boxWidth,
+        height: 100
     },
     imageStyle:{
         width:80,
