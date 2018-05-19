@@ -21,7 +21,7 @@ class BannerView extends Component{
     constructor(props){
         super(props);
         this.state = {
-            currentPage:0 //当前页面
+            currentPage: 0 //当前页面
         };
     }
     //开启定时器
