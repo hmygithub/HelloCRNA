@@ -12,7 +12,7 @@ import {
 const Dimensions = require('Dimensions');
 const ScreenWidth = Dimensions.get('window').width;
 
-class RainBowScrollView extends React.Component{
+export default class RainBowScrollView extends React.Component{
     renderChild= () => {
         const colors = ['red', 'green', 'blue','yellow'];
         return colors.map((item,i)=>{
