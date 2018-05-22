@@ -2,20 +2,20 @@
  * Created by lenovo on 2018/5/19.
  */
 import React, { Component } from 'react';
-import { FlagList, StyleSheet, Text, View, Image } from 'react-native';
+import { FlatList, StyleSheet, Text, View, Image } from 'react-native';
 
 const BaseUrl = 'http://192.168.0.105:3000/images/';
 const Dimensions =  require('Dimensions');
 const ScreenWidth = Dimensions.get('window').width;
 
-export default class MyListView extends Component{
+class MyListView extends Component{
     constructor(props){
         super(props);
         this.state = {
             dataSource: []
         }
     }
-    // 加载数据
+    // 鍔犺浇鏁版嵁
     fetchData = () => {
         fetch(`${BaseUrl}test_wine.json`,{
             method: 'GET',
@@ -24,8 +24,8 @@ export default class MyListView extends Component{
                 'Content-Type': 'application/json'
             }
         })
-        .then((response) => response.json())
-        .then((responseData) => {
+            .then((response) => response.json())
+            .then((responseData) => {
                 let i = 0;
                 let dataList = [];
                 responseData.map(item => {
@@ -38,27 +38,27 @@ export default class MyListView extends Component{
                 this.setState({ dataSource: dataList })
             }).done()
     }
-    //渲染完组件，加载数据
+    //娓叉煋瀹岀粍浠讹紝鍔犺浇鏁版嵁
     componentDidMount(){
         this.fetchData();
     }
     render(){
         return (
             <View style={styles.container}>
-                <FlagList
+                <FlatList
                     keyExtractor={item => item.key.toString()}
                     data={this.state.dataSource}
                     renderItem={({item}) => (
                         <View style={styles.container}>
-                            <Image source={{ uri: BaseUrl + item.images }} style={styles.iconStyle}></Image>
+                            <Image source={{ uri: BaseUrl + item.image }} style={styles.iconStyle}></Image>
                             <View style={styles.textWrapperStyle}>
                                 <Text style={styles.titleStyle}>{item.name}</Text>
-                                <Text style={styles.moneyStyle}>￥{item.money}</Text>
+                                <Text style={styles.moneyStyle}>锟item.money}</Text>
                             </View>
                         </View>
                     )}
                     >
-                </FlagList>
+                </FlatList>
             </View>
         )
     }
