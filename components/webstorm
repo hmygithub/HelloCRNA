@@ -1,3 +1,7 @@
+// https://blog.csdn.net/huahua78/article/details/52330792 git 命令报错
+https://www.jianshu.com/p/752613f4b1c9 webstorm 拉取 github代码
 webstorm 与 github 连接
 1、配置git
 2、配置github
+3、获取本地git ssh 打开git bash，输入ssh-keygen -t rsa -C  找到id_rsa.pub的文件
+打开自己的github账户，找到settings-ssh and GPGkey，打开之后点击右上角new ssh key，将复制的ssh粘贴即可。
