@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, View, Text, FlatList, StyleSheet } from 'react-native';
+import {AppRegistry, Button, View, Text, FlatList, StyleSheet } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 //const BagView = require('./components/BagView');
@@ -187,4 +187,21 @@ const styles = StyleSheet.create({
     }
 });
 
-export default RootTabs;
+//export default RootTabs;
+// alignItems
+export default class AlignItemsBasics extends React.Component{
+    render(){
+        return (
+            <View style={{
+                flex: 1,
+                flexDirection: 'row',// column
+                justifyContent: 'center',// flex-start,flex-end
+                alignItems: 'center'// flex-start,flex-end
+            }}>
+                <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}></View>
+                <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+                <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+            </View>
+        )
+    }
+}
