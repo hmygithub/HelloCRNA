@@ -6,7 +6,7 @@ import { FlatList, StyleSheet,View, Text,Button,Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import HeadScreen from './HeadScreen';
 
-class DynamicDetailScreen extends React.Component {
+export default class DynamicDetailScreen extends React.Component {
     static navigationOptions = ({ navigation }) => ({
         title: navigation.state.params.name,
         headerStyle: styles.headerBar,
@@ -15,12 +15,12 @@ class DynamicDetailScreen extends React.Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text>DynamicScreen</Text>
+                <Text>DynamicDetailScreen</Text>
             </View>
         )
     }
 }
-//组件样式
+//缁勪欢鏍峰紡
 const styles = StyleSheet.create({
     container: {
         flex: 1

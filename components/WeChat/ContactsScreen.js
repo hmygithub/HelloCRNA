@@ -6,10 +6,10 @@ import { FlatList, StyleSheet,View, Text,Button,Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import HeadScreen from './HeadScreen';
 
-//Í¨Ñ¶Â¼×é¼ş
+//é€šè®¯å½•ç»„ä»¶
 export default class ContactsScreen extends React.Component {
     static navigationOptions = {
-        title: 'Í¨Ñ¶Â¼',
+        title: 'é€šè®¯å½•',
         tabBarIcon: ({tintColor}) => (
             <Icon name="ios-contacts-outline" size={26} color={tintColor} />
         )
@@ -17,46 +17,46 @@ export default class ContactsScreen extends React.Component {
     render(){
         return (
             <View style={[styles.container,styles.findBody]}>
-                <HeadScreen title="Í¨Ñ¶Â¼"></HeadScreen>
+                <HeadScreen title="é€šè®¯å½•"></HeadScreen>
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="md-person-add" color="#51BBE5" size={22} />
-                    <Text style={styles.findViewText}>ĞÂµÄÅóÓÑ</Text>
+                    <Text style={styles.findViewText}>æ–°çš„æœ‹å‹</Text>
                 </View>
 
                 <View style={[styles.findView,styles.findMT]}>
                     <Icon style={styles.findViewIcon} name="ios-people-outline" color="#51BBE5" size={22} />
-                    <Text style={styles.findViewText}>ÈºÁÄ</Text>
+                    <Text style={styles.findViewText}>ç¾¤èŠ</Text>
                 </View>
 
                 <View style={[styles.findView,styles.findMT]}>
                     <Icon style={styles.findViewIcon} name="ios-bookmark-outline" color="#BAEE44" size={22} />
-                    <Text style={styles.findViewText}>±êÇ©</Text>
+                    <Text style={styles.findViewText}>æ ‡ç­¾</Text>
                 </View>
 
                 <View style={[styles.findView,styles.findMT]}>
                     <Icon style={styles.findViewIcon} name="ios-contact-outline" color="#3399FF" size={22} />
-                    <Text style={styles.findViewText}>¹«ÖÚºÅ</Text>
+                    <Text style={styles.findViewText}>å…¬ä¼—å·</Text>
                 </View>
                 <View style={{ marginTop:15}}>
-                    <Text>ÎÒµÄÆóÒµ</Text>
+                    <Text>æˆ‘çš„ä¼ä¸š</Text>
                 </View>
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-color-filter-outline" color="#55C1E7" size={22} />
-                    <Text style={styles.findViewText}>±¼³Û¼¯ÍÅ</Text>
+                    <Text style={styles.findViewText}>å¥”é©°é›†å›¢</Text>
                 </View>
                 <View style={{ marginTop:10}}>
                     <Text>A</Text>
                 </View>
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-cloud-outline" color="#55C1E7" size={22} />
-                    <Text style={styles.findViewText}>°¢ÀïÔÆ</Text>
+                    <Text style={styles.findViewText}>é˜¿é‡Œäº‘</Text>
                 </View>
                 <View style={{ marginTop:10}}>
                     <Text>B</Text>
                 </View>
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-basketball-outline" color="#55C1E7" size={22} />
-                    <Text style={styles.findViewText}>B.ÇÇµ¤</Text>
+                    <Text style={styles.findViewText}>B.ä¹”ä¸¹</Text>
                 </View>
 
             </View>
@@ -64,7 +64,7 @@ export default class ContactsScreen extends React.Component {
     }
 }
 
-//×é¼şÑùÊ½
+//ç»„ä»¶æ ·å¼
 const styles = StyleSheet.create({
     container: {
         flex: 1
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         fontSize:12,
         marginTop:8
     },
-    //·¢ÏÖ×é¼şÑùÊ½
+    //å‘ç°ç»„ä»¶æ ·å¼
     findView:{
         backgroundColor:'#fff',
         marginTop:15,

@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
 import { Button, View, Text, FlatList, StyleSheet } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import Icon from 'react-native-vector-icons/Ionicons';
 //const BagView = require('./components/BagView');
 //const LoginView = require('./components/LoginView');
 //const BannerView = require('./components/BannerView');
 //const RainBowScrollView  = require('./components/RainBowScrollView');
 const MyListView = require('./components/MyListView');
-import Icon from 'react-native-vector-icons/Ionicons';
+import HeadScreen from './components/WeChat/HeadScreen';
+import DynamicScreen from './components/WeChat/DynamicScreen';
+import DynamicDetailScreen from './components/WeChat/DynamicDetailScreen';
+import FindScreen from './components/WeChat/FindScreen';
+import MyScreen from './components/WeChat/MyScreen';
+//const HeadScreen = require('./components/WeChat/HeadScreen');
+//const DynamicScreen = require('./components/WeChat/DynamicScreen');
+//const FindScreen = require('./components/WeChat/FindScreen');
+//const MyScreen = require('./components/WeChat/MyScreen')
 
 //class HomeScreen extends React.Component {
 //    render(){
@@ -63,42 +72,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 //    }
 //}
 // https://www.kancloud.cn/daiji/webapp/509781
-//头部公共组件
-class HeadScreen extends React.Component {
-    render() {
-        return (
-            <View style={{height:35,backgroundColor:'#242529',padding:10}}>
-                <View style={{flex:1,flexDirection:'row',alignItems:'center'}}>
-                    <View style={{flex:1}}>
-                        <Text style={{color:'#ffffff'}}>微信</Text>
-                    </View>
-                    <View style={{flex:1,alignItems:'flex-end'}}>
-                        <Text><Icon name="md-add" color="#fff" size={18} /></Text>
-                    </View>
-                </View>
-            </View>
-        );
-    }
-}
-//动态组件
-const DynamicScreen = () => (
-    <view style={styles.container}>
-        <HeadScreen></HeadScreen>
-    </view>
-)
-//发现组件
-const FindScreen = () => (
-    <view style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Profile Screen</Text>
-    </view>
-)
 
-//我的组件
-const MyScreen = () => (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Profile Screen</Text>
-    </View>
-);
 const HomeScreen = () => (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <FlatList
@@ -118,23 +92,32 @@ const HomeScreen = () => (
     </View>
 );
 
-//const ProfileScreen = () => (
-//    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//        <Text>Profile Screen</Text>
-//    </View>
-//);
+const ProfileScreen = () => (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Profile Screen</Text>
+    </View>
+);
 
 const RootTabs = createBottomTabNavigator({// createMaterialTopTabNavigator
-    //Home: {
-    //    screen: HomeScreen
-    //},
-    //Profile: {
-    //    screen: ProfileScreen
-    //}
+    Home: {
+        screen: HomeScreen
+    },
+    Profile: {
+        screen: ProfileScreen
+    },
     dynamic: {
         screen: DynamicScreen,
         navigationOptions: ({navigation}) => ({
             title:'动态',
+            tabBarIcon: ({tintColor}) => (
+                <Icon name="ios-text-outline" size={26} color={tintColor}></Icon>
+            )
+        })
+    },
+    dynamicDetail: {
+        screen: DynamicDetailScreen,
+        navigationOptions: ({navigation}) => ({
+            title:'动态详情',
             tabBarIcon: ({tintColor}) => (
                 <Icon name="ios-text-outline" size={26} color={tintColor}></Icon>
             )

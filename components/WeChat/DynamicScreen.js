@@ -8,7 +8,7 @@ import HeadScreen from './HeadScreen';
 
 export default class DynamicScreen extends React.Component {
     static navigationOptions = {
-        title: '∂ØÃ¨',
+        title: 'Âä®ÊÄÅ',
         tabBarIcon: ({tintColor}) => (
             <Icon name="ios-text-outline" size={26} color={tintColor} />
         )
@@ -16,29 +16,29 @@ export default class DynamicScreen extends React.Component {
     render(){
         return(
             <View style={styles.container}>
-                <HeaderCreen></HeaderCreen>
+                <HeadScreen></HeadScreen>
                 <View style={styles.container}>
                     <FlatList
                         data={[
-                            {key:'1',name:'’≈»˝',text:'Œ“≤ª÷™µ¿Àµ ≤√¥£°œÎÀµ ≤√¥»ª∫ÛœÎœÎ”÷≤ª÷™µ¿Àµ ≤√¥¡À£°œ£Õ˚◊Óµ◊≤„µƒ∫¢◊”∂º”–√ŒœÎ£¨∂ºƒ‹”–≥–‘ÿ√ŒœÎµƒ¡¶¡ø£°–ª–ªæËøÓµƒ≈Û”—£¨≤ª“™Õ¸º«ƒ«–©±ªÕ¸º«µƒ∫¢◊”',time:'2017-01-02 10:20:33'},
-                            {key:'2',name:'xiongshi1998',text:'≥ˆ…˙Œﬁ∑®—°‘Ò£¨µ´»À…˙ø…“‘—°‘Ò',time:'2017-01-02 10:20:33'},
-                            {key:'3',name:'2222',text:'π˝∂‡µƒπÿ◊¢∫Õ∆ÿπ‚ª·≤ªª·∂‘∫¢◊”µƒ’˝≥£…˙ªÓ”–”∞œÏ£ø“ª’Û∑ÁÀ∆µƒ¿Îø™∫Û£¨∫¢◊”ª·≤ªª·”–µ„ ß¬‰£ø',time:'2017-01-02 10:20:33'},
-                            {key:'4',name:'2222',text:'Àµ’Êµƒ√ª”–√ΩÃÂµƒ±®µ¿ À≠÷™µ¿¥Û…Ω…Ó¥¶µƒø‡ƒ—∞° œ£Õ˚√ΩÃÂ∂‡∂‡πÿ◊¢…Áª·»ı ∆»∫ÃÂ ¥Û…Ω…Ó¥¶ªπ”–∫‹∂‡∫‹∂‡µƒ±˘ª®ƒ–∫¢ƒÿ',time:'2017-01-02 10:20:33'},
-                            {key:'5',name:'2222',text:'Àµ’Êµƒ√ª”–√ΩÃÂµƒ±®µ¿ À≠÷™µ¿¥Û…Ω…Ó¥¶µƒø‡ƒ—∞° œ£Õ˚√ΩÃÂ∂‡∂‡πÿ◊¢…Áª·»ı ∆»∫ÃÂ ¥Û…Ω…Ó¥¶ªπ”–∫‹∂‡∫‹∂‡µƒ±˘ª®ƒ–∫¢ƒÿ',time:'2017-01-02 10:20:33'}
+                            {key:'1',name:'ÊñπÂúÜ',text:'Êàë‰∏çÁü•ÈÅìËØ¥‰ªÄ‰πàÔºÅÊÉ≥ËØ¥‰ªÄ‰πàÁÑ∂ÂêéÊÉ≥ÊÉ≥Âèà‰∏çÁü•ÈÅìËØ¥‰ªÄ‰πà‰∫ÜÔºÅÂ∏åÊúõÊúÄÂ∫ïÂ±ÇÁöÑÂ≠©Â≠êÈÉΩÊúâÊ¢¶ÊÉ≥ÔºåÈÉΩËÉΩÊúâÊâøËΩΩÊ¢¶ÊÉ≥ÁöÑÂäõÈáèÔºÅË∞¢Ë∞¢ÊçêÊ¨æÁöÑÊúãÂèãÔºå‰∏çË¶ÅÂøòËÆ∞ÈÇ£‰∫õË¢´ÂøòËÆ∞ÁöÑÂ≠©Â≠ê',time:'2017-01-02 10:20:33'},
+                            {key:'2',name:'Ê±ùÊΩá',text:'Âá∫ÁîüÊó†Ê≥ïÈÄâÊã©Ôºå‰ΩÜ‰∫∫ÁîüÂèØ‰ª•ÈÄâÊã©',time:'2017-01-02 10:20:33'},
+                            {key:'3',name:'Ê¢¶Ëåπ',text:'ËøáÂ§öÁöÑÂÖ≥Ê≥®ÂíåÊõùÂÖâ‰ºö‰∏ç‰ºöÂØπÂ≠©Â≠êÁöÑÊ≠£Â∏∏ÁîüÊ¥ªÊúâÂΩ±ÂìçÔºü‰∏ÄÈòµÈ£é‰ººÁöÑÁ¶ªÂºÄÂêéÔºåÂ≠©Â≠ê‰ºö‰∏ç‰ºöÊúâÁÇπÂ§±ËêΩÔºü',time:'2017-01-02 10:20:33'},
+                            {key:'4',name:'Â¥îÁíê',text:'ËØ¥ÁúüÁöÑÊ≤°ÊúâÂ™í‰ΩìÁöÑÊä•ÈÅì Ë∞ÅÁü•ÈÅìÂ§ßÂ±±Ê∑±Â§ÑÁöÑËã¶ÈöæÂïä Â∏åÊúõÂ™í‰ΩìÂ§öÂ§öÂÖ≥Ê≥®Á§æ‰ºöÂº±ÂäøÁæ§‰Ωì Â§ßÂ±±Ê∑±Â§ÑËøòÊúâÂæàÂ§öÂæàÂ§öÁöÑÂÜ∞Ëä±Áî∑Â≠©Âë¢',time:'2017-01-02 10:20:33'},
+                            {key:'5',name:'ÈôàÊØÖ',text:'ËØ¥ÁúüÁöÑÊ≤°ÊúâÂ™í‰ΩìÁöÑÊä•ÈÅì Ë∞ÅÁü•ÈÅìÂ§ßÂ±±Ê∑±Â§ÑÁöÑËã¶ÈöæÂïä Â∏åÊúõÂ™í‰ΩìÂ§öÂ§öÂÖ≥Ê≥®Á§æ‰ºöÂº±ÂäøÁæ§‰Ωì Â§ßÂ±±Ê∑±Â§ÑËøòÊúâÂæàÂ§öÂæàÂ§öÁöÑÂÜ∞Ëä±Áî∑Â≠©Âë¢',time:'2017-01-02 10:20:33'}
                         ]}
-                        renderIem={({item}) => (
+                        renderItem={({item}) => (
                             <View style={styles.item}>
                                 <View style={{flex: 1}}>
                                     <Text><Icon name="ios-chatboxes-outline" color="#000" size={30}/></Text>
                                 </View>
                                 <View style={{flex: 9}}>
-                                    <Text onPress={()=>this.props.navigator.navigate('find')} style={styles.name}>{item.name}</Text>
-                                    <Text onPress={()=>this.props.navigation.navigate('dynamicDetail',{name: '6666'})} style={styles.text}></Text>
+                                    <Text onPress={()=>this.props.navigation.navigate('find')} style={styles.name}>{item.name}</Text>
+                                    <Text onPress={()=>this.props.navigation.navigate('dynamicDetail',{name: item.text})} style={styles.text}>{item.text}</Text>
                                     <Text style={styles.time}>{item.time}</Text>
                                 </View>
                             </View>
                         )}
-                        ></FlatList>
+                        />
                 </View>
             </View>
         )
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         fontSize:12,
         marginTop:8
     },
-    //∑¢œ÷◊Èº˛—˘ Ω
+    //ÂèëÁé∞ÁªÑ‰ª∂Ê†∑Âºè
     findView:{
         backgroundColor:'#fff',
         marginTop:15,

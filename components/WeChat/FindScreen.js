@@ -2,61 +2,68 @@
  * Created by lenovo on 2018/5/24.
  */
 import React from 'react';
-import { FlatList, StyleSheet, View, Text, Button, Image } from 'react-native';
+import { FlatList, StyleSheet,View, Text,Button,Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import HeadScreen from './HeadScreen';
 
+//ÂèëÁé∞ÁªÑ‰ª∂
 export default class FindScreen extends React.Component {
     static navigationOptions = {
-        title: '∑¢œ÷',
-        tabBarIcon: ({ tintColor }) => (
-            <Icon name="ios-compass-outline" size={26} color={tintColor}/>
+        title: 'ÂèëÁé∞',
+        tabBarIcon: ({tintColor}) => (
+            <Icon name="ios-compass-outline" size={26} color={tintColor} />
         )
-    }
+    };
     render(){
-        return(
-            <View style={[styles.container, styles.findBody]}>
-                <HeadScreen title='∑¢œ÷'></HeadScreen>
+        return (
+            <View style={[styles.container,styles.findBody]}>
+                <HeadScreen title="ÂèëÁé∞"></HeadScreen>
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-contacts-outline" color="#3399FF" size={22} />
-                    <Text style={styles.findViewText}>≈Û”—»¶</Text>
+                    <Text style={styles.findViewText}>ÊúãÂèãÂúà</Text>
+                </View>
+
+                <View style={styles.findView}>
+                    <Icon style={styles.findViewIcon} name="ios-crop-outline" color="#51BBE5" size={22} />
+                    <Text style={styles.findViewText}>Êâ´‰∏ÄÊâ´</Text>
                 </View>
 
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-search-outline" color="#51BBE5" size={22} />
-                    <Text style={styles.findViewText}>À—“ªÀ—</Text>
+                    <Text style={styles.findViewText}>Êêú‰∏ÄÊêú</Text>
                 </View>
 
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-tablet-portrait" color="#BAEE44" size={22} />
-                    <Text style={styles.findViewText}>π∫ŒÔ</Text>
+                    <Text style={styles.findViewText}>Ë¥≠Áâ©</Text>
                 </View>
 
-                <View style={[styles.findView, styles.findMT]}>
+                <View style={[styles.findView,styles.findMT]}>
                     <Icon style={styles.findViewIcon} name="ios-game-controller-b-outline" color="#3399FF" size={22} />
-                    <Text style={styles.findViewText}>”Œœ∑</Text>
+                    <Text style={styles.findViewText}>Ê∏∏Êàè</Text>
                 </View>
 
                 <View style={styles.findView}>
                     <Icon style={styles.findViewIcon} name="ios-code" color="#55C1E7" size={22} />
-                    <Text style={styles.findViewText}>–°≥Ã–Ú</Text>
+                    <Text style={styles.findViewText}>Â∞èÁ®ãÂ∫è</Text>
                 </View>
+
             </View>
         )
     }
 }
 
-//◊Èº˛—˘ Ω
+//ÁªÑ‰ª∂Ê†∑Âºè
 const styles = StyleSheet.create({
     container: {
         flex: 1
     },
     item: {
-        flex: 1,
-        flexDirection: 'row',
-        borderBottomWidth: 6,
-        borderBottomColor: '#f2f2f2',
-        padding: 10
+        flex:1,
+        flexDirection:'row',
+        borderBottomWidth:6,
+        borderBottomColor:'#F2F2F2',
+        padding:10
     },
     name:{
         color:'#388BFF',
@@ -71,6 +78,7 @@ const styles = StyleSheet.create({
         fontSize:12,
         marginTop:8
     },
+    //ÂèëÁé∞ÁªÑ‰ª∂Ê†∑Âºè
     findView:{
         backgroundColor:'#fff',
         marginTop:15,
@@ -93,4 +101,4 @@ const styles = StyleSheet.create({
         borderTopWidth:1,
         borderTopColor:'#EBEBEB'
     }
-})
+});
